@@ -2,86 +2,114 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: "Segoe UI", sans-serif;
 }
 
 body {
-  background: #0b0f2a;
+  background: radial-gradient(circle at top, #0d1b4c, #050818);
   color: #fff;
 }
 
+/* NAVBAR */
 .navbar {
   display: flex;
   justify-content: space-between;
-  padding: 20px;
-  background: #0e153a;
+  padding: 20px 40px;
+  align-items: center;
 }
 
 .logo {
-  color: #00ffcc;
+  font-size: 26px;
+  font-weight: bold;
+  color: #1fffd5;
 }
 
-.btn {
-  padding: 10px 20px;
-  background: #00ffcc;
+.download-btn {
+  background: #1fffd5;
   color: #000;
-  border-radius: 6px;
-  text-decoration: none;
-  cursor: pointer;
-  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
 }
 
-.primary {
-  background: linear-gradient(90deg, #00ffcc, #00ccff);
-}
-
+/* HERO */
 .hero {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: space-around;
-  padding: 60px 20px;
+  padding: 80px 40px;
+  flex-wrap: wrap;
 }
 
-.hero-img {
+.hero-text h1 {
+  font-size: 42px;
+}
+
+.hero-text p {
+  margin: 15px 0;
+  color: #cbd5ff;
+}
+
+.primary-btn {
+  background: linear-gradient(90deg, #1fffd5, #00b3ff);
+  border: none;
+  padding: 12px 30px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.hero-image img {
   width: 300px;
+  filter: drop-shadow(0 0 25px rgba(31,255,213,0.4));
 }
 
-.games, .features, .download {
-  padding: 50px 20px;
+/* SECTIONS */
+.section {
+  padding: 70px 40px;
   text-align: center;
 }
 
-.game-grid, .feature-grid {
+.section h2 {
+  font-size: 30px;
+  margin-bottom: 40px;
+}
+
+.dark {
+  background: rgba(255,255,255,0.03);
+}
+
+/* CARDS */
+.cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 20px;
-  margin-top: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap: 25px;
 }
 
-.game-card {
-  background: #131a4a;
-  padding: 20px;
-  border-radius: 12px;
+.card {
+  background: linear-gradient(180deg, #0f1e5a, #09123a);
+  padding: 25px;
+  border-radius: 14px;
+  font-size: 18px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+  transition: 0.3s;
 }
 
-.game-card img {
-  width: 100%;
-  border-radius: 10px;
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 20px rgba(31,255,213,0.3);
 }
 
-.feature {
-  background: #131a4a;
-  padding: 20px;
-  border-radius: 12px;
-}
-
+/* DOWNLOAD */
 .download {
-  background: #0e153a;
+  text-align: center;
+  padding: 70px 40px;
 }
 
+/* FOOTER */
 footer {
+  text-align: center;
   padding: 20px;
   background: #000;
-  text-align: center;
   font-size: 14px;
 }
